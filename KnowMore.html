@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Know More - EaseBanking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+        }
+        .logo {
+            margin-top: 30px;
+        }
+        .logo img {
+            width: 150px;
+            height: auto;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: left;
+        }
+        h1 {
+            text-align: center;
+            color: #0056b3;
+        }
+        .section {
+            margin-top: 20px;
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #0056b3;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .section-title button {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+        .section-title button:hover {
+            background-color: #003d82;
+        }
+        .content {
+            display: none;
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+        .footer {
+            margin-top: 30px;
+            padding: 15px;
+            text-align: center;
+            background: #0056b3;
+            color: white;
+            border-radius: 0 0 8px 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Centered Logo -->
+    <div class="logo">
+        <img src="images/Logo_img.png" alt="EaseBanking Logo">
+    </div>
+
+    <div class="container">
+        <h1>Know More About EaseBanking</h1>
+
+        <div class="section">
+            <div class="section-title">
+                <span>Our Services</span>
+                <button onclick="toggleContent('content1')">Read More</button>
+            </div>
+            <div id="content1" class="content">
+                EaseBanking offers **savings accounts, loans, fixed deposits, and instant money transfers**. Our digital banking platform provides **secure and seamless transactions**, making financial management easier for individuals and businesses.
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">
+                <span>Security & Privacy</span>
+                <button onclick="toggleContent('content2')">Read More</button>
+            </div>
+            <div id="content2" class="content">
+                We prioritize security with **end-to-end encryption, multi-factor authentication, and fraud detection systems**. Your personal and financial data is protected with the latest cybersecurity measures.
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">
+                <span>Ease of Access</span>
+                <button onclick="toggleContent('content3')">Read More</button>
+            </div>
+            <div id="content3" class="content">
+                With **EaseBanking mobile and web platforms**, you can access your account **anytime, anywhere**. Our **intuitive interface** ensures that you can manage your finances effortlessly.
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">
+                <span>Customer Support</span>
+                <button onclick="toggleContent('content4')">Read More</button>
+            </div>
+            <div id="content4" class="content">
+                Our 24/7 customer support team is always available to assist you with any banking queries. Contact us via **live chat, email, or toll-free number** for quick resolutions.
+            </div>
+        </div>
+
+        <div class="footer">
+            &copy; 2025 EaseBanking. All rights reserved.
+        </div>
+    </div>
+
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>

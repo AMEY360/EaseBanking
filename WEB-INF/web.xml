@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+                             http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0"
+         metadata-complete="true">
+
+    <!-- Login Servlet -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- SignUp Servlet -->
+    <servlet>
+        <servlet-name>SignUpServlet</servlet-name>
+        <servlet-class>SignUpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignUpServlet</servlet-name>
+        <url-pattern>/SignUpServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Send OTP Servlet -->
+    <servlet>
+        <servlet-name>SendOTPServlet</servlet-name>
+        <servlet-class>SendOTPServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SendOTPServlet</servlet-name>
+        <url-pattern>/SendOTPServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- OTP Verification Servlet -->
+    <servlet>
+        <servlet-name>OTPVerificationServlet</servlet-name>
+        <servlet-class>OTPVerificationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OTPVerificationServlet</servlet-name>
+        <url-pattern>/OTPVerificationServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Verify Servlet -->
+    <servlet>
+        <servlet-name>VerifyServlet</servlet-name>
+         <servlet-class>VerifyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VerifyServlet</servlet-name>
+        <url-pattern>/VerifyServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Logout Servlet -->
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>  
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Profile Servlet -->
+    <servlet>
+        <servlet-name>ProfileServlet</servlet-name>
+        <servlet-class>ProfileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProfileServlet</servlet-name>
+        <url-pattern>/ProfileServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Deposit Servlet -->
+    <servlet>
+        <servlet-name>DepositServlet</servlet-name>
+        <servlet-class>DepositServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DepositServlet</servlet-name>  
+        <url-pattern>/DepositServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Transfer Servlet -->
+    <servlet>
+        <servlet-name>TransferServlet</servlet-name>
+        <servlet-class>TransferServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TransferServlet</servlet-name>
+        <url-pattern>/TransferServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>TransactionServlet</servlet-name>
+        <servlet-class>TransactionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TransactionServlet</servlet-name>
+        <url-pattern>/TransactionServlet</url-pattern>
+    </servlet-mapping>
+    
+
+    <!-- LoginFilter -->
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/home.jsp</url-pattern>
+        <url-pattern>/profile.jsp</url-pattern>
+        <url-pattern>/transfer.jsp</url-pattern>
+        <url-pattern>/deposit.jsp</url-pattern>
+        <url-pattern>/transaction.jsp</url-pattern>
+    </filter-mapping>
+
+    <!-- Welcome Page Redirect -->
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>

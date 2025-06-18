@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - EaseBanking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+        }
+        .logo {
+            margin-top: 30px;
+        }
+        .logo img {
+            width: 150px;
+            height: auto;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: left;
+        }
+        h1 {
+            text-align: center;
+            color: #0056b3;
+        }
+        .faq-section {
+            margin-top: 20px;
+        }
+        .faq {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question {
+            font-size: 18px;
+            font-weight: bold;
+            color: #0056b3;
+        }
+        .faq button {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+        .faq button:hover {
+            background-color: #003d82;
+        }
+        .answer {
+            display: none;
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+        .footer {
+            margin-top: 30px;
+            padding: 15px;
+            text-align: center;
+            background: #0056b3;
+            color: white;
+            border-radius: 0 0 8px 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Centered Logo -->
+    <div class="logo">
+        <img src="images/Logo_img.png" alt="EaseBanking Logo">
+    </div>
+
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+
+        <div class="faq-section">
+            <div class="faq">
+                <span class="faq-question">How do I create an account?</span>
+                <button onclick="toggleAnswer('answer1')">View Answer</button>
+            </div>
+            <div id="answer1" class="answer">
+                To create an account, click on **Sign Up**, fill in your details, and verify via OTP.
+            </div>
+
+            <div class="faq">
+                <span class="faq-question">What should I do if I forget my password?</span>
+                <button onclick="toggleAnswer('answer2')">View Answer</button>
+            </div>
+            <div id="answer2" class="answer">
+                Click **Forgot Password** on the login page. Enter your registered email/phone, and reset instructions will be sent to you.
+            </div>
+
+            <div class="faq">
+                <span class="faq-question">Are my transactions secure?</span>
+                <button onclick="toggleAnswer('answer3')">View Answer</button>
+            </div>
+            <div id="answer3" class="answer">
+                Yes! We use **end-to-end encryption** and **multi-factor authentication** for security.
+            </div>
+
+            <div class="faq">
+                <span class="faq-question">How can I check my account balance?</span>
+                <button onclick="toggleAnswer('answer4')">View Answer</button>
+            </div>
+            <div id="answer4" class="answer">
+                Log in and go to the **Dashboard**. Your balance and recent transactions will be shown there.
+            </div>
+
+            <div class="faq">
+                <span class="faq-question">Is there a mobile app for EaseBanking?</span>
+                <button onclick="toggleAnswer('answer5')">View Answer</button>
+            </div>
+            <div id="answer5" class="answer">
+                No! But we are working to launch our mobile app to available on the **Google Play Store** and **Apple App Store**.
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2025 EaseBanking. All rights reserved.
+    </div>
+
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
